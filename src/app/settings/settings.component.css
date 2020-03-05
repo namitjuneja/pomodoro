@@ -1,0 +1,69 @@
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	font-family: monospace;
+	height: 80vh
+}
+
+.settings-container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	min-height: 90%;
+}
+
+.pomodoro-button-container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 10%;
+}
+
+.individual-settings-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding:0em 6em 0em 6em;
+	min-width: 10em;
+}
+
+.setting-value{
+	font-size: 10em;
+}
+
+.settings-button-container{
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-between;
+	min-width: 100%;
+}
+
+.settings-button{
+	font-size: 2em;
+	border: none;
+	background: #ffffff;
+}
+
+.setting-label{
+	font-size: 1.3em;
+	font-family: sans-serif;
+	padding-top: 1em;
+}
+
+.pomodoro-button{
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #cccccc;
+	border-width: 1px;
+	background: #ffffff;
+	font-size: 1.8em;
+	padding: 10px;
+	margin: 4px 10px;
+	min-width: 150px;
+}
