@@ -15,7 +15,8 @@ import { PomodoroTimerComponent } from './pomodoro-timer/pomodoro-timer.componen
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: '', component: SettingsComponent }])
+      { path: '', component: SettingsComponent },
+      { path: 'pomodoro-timer', component: PomodoroTimerComponent }])
   ],
   providers: [],
   bootstrap: [AppComponent]
