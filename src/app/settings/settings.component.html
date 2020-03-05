@@ -3,30 +3,33 @@
 	<section class="settings-container">
 
 		<div class="individual-settings-container">
-			<div class="setting-value"> 25 </div>
+			<div class="setting-value"> {{this.sessionSettings.getSessionDuration('pomodoro')}} </div>
 			<div class="settings-button-container"> 
-				<button class="settings-button">-</button>
-				<button class="settings-button">+</button>
+				<button class="settings-button" (click)='this.sessionSettings.decrementDuration("pomodoro")'>-</button>
+				<button class="settings-button" (click)='this.sessionSettings.incrementDuration("pomodoro")'>+</button>
 			</div>
 			<div class="setting-label"> Pomodoro duration </div>
+			<div class="setting-label-unit"> (minutes) </div>
 		</div>
 
 		<div class="individual-settings-container">
-			<div class="setting-value"> 5 </div>
+			<div class="setting-value"> {{this.sessionSettings.getSessionDuration('short_break')}} </div>
 			<div class="settings-button-container"> 
-				<button class="settings-button">-</button>
-				<button class="settings-button">+</button>
+				<button class="settings-button" (click)='this.sessionSettings.decrementDuration("short_break")'>-</button>
+				<button class="settings-button" (click)='this.sessionSettings.incrementDuration("short_break")'>+</button>
 			</div>
 			<div class="setting-label"> Short Break duration </div>
+			<div class="setting-label-unit"> (minutes) </div>
 		</div>
 
 		<div class="individual-settings-container">
-			<div class="setting-value"> 15 </div>
+			<div class="setting-value"> {{this.sessionSettings.getSessionDuration('long_break')}} </div>
 			<div class="settings-button-container"> 
-				<button class="settings-button">-</button>
-				<button class="settings-button">+</button>
+				<button class="settings-button" (click)='this.sessionSettings.decrementDuration("long_break")'>-</button>
+				<button class="settings-button" (click)='this.sessionSettings.incrementDuration("long_break")'>+</button>
 			</div>
 			<div class="setting-label"> Long Break duration </div>
+			<div class="setting-label-unit"> (minutes) </div>
 		</div>
 		
 	</section>
@@ -34,8 +37,8 @@
 
 
 	<section class="pomodoro-button-container">
-		<button class="pomodoro-button">Start</button>
-		<button class="pomodoro-button">Reset</button>
+		<button class="pomodoro-button" routerLink='/pomodoro-timer' >Start</button>
+		<button class="pomodoro-button" (click)='this.sessionSettings.resetSessionDurations()'>Reset</button>
 	</section>
 
 

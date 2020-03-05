@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SettingsComponent } from './settings/settings.component';
 import { PomodoroTimerComponent } from './pomodoro-timer/pomodoro-timer.component';
+import { SessionSettingsService } from './session-settings.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { PomodoroTimerComponent } from './pomodoro-timer/pomodoro-timer.componen
       { path: '', component: SettingsComponent },
       { path: 'pomodoro-timer', component: PomodoroTimerComponent }])
   ],
-  providers: [],
+  providers: [SessionSettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

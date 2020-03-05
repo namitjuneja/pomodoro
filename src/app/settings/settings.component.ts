@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SessionSettingsService } from '../session-settings.service';
 
 @Component({
   selector: 'app-settings',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+  	public sessionSettings : SessionSettingsService
+  ) { }
 
   ngOnInit(): void {
   }
-
 }
