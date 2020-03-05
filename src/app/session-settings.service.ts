@@ -7,7 +7,7 @@ export class SessionSettingsService {
 
   constructor() { }
 
-  sessionDurations = {'pomodoro':1, 'short_break': 1, 'long_break':15};
+  sessionDurations = {'pomodoro':0.1, 'short_break': 0.1, 'long_break':0.15};
 
   incrementDuration(sessionName){
   	if (this.sessionDurations[sessionName]<60) {
@@ -26,6 +26,6 @@ export class SessionSettingsService {
   }
 
   resetSessionDurations(){
-  	this.sessionDurations = {'pomodoro':1, 'short_break':1, 'long_break':15};
+  	this.sessionDurations = {'pomodoro':0.1, 'short_break':0.1, 'long_break':0.15};
   }
 }

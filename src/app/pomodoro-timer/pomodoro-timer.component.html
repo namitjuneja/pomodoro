@@ -2,7 +2,7 @@
 
 	<section class="pomodoro-timer-container">
 		<div [ngClass]="['pomodoro-timer', running ? '' : 'blinking']"> {{minutesString(minutes)}}:{{secondsString(seconds)}} </div>
-		<div class="pomodoro-label"> Pomodoro Session # 5 </div>
+		<div class="pomodoro-label"> {{sessionLabel}} </div>
 	</section>
 
 	<section class="pomodoro-button-container">
