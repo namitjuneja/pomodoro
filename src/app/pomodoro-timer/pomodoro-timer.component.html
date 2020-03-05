@@ -1,13 +1,13 @@
 <div class="container">
 
 	<section class="pomodoro-timer-container">
-		<div class="pomodoro-timer"> 19:55 </div>
+		<div class="pomodoro-timer"> {{minutes}}:{{seconds}} </div>
 		<div class="pomodoro-label"> Pomodoro Session # 5 </div>
 	</section>
 
 	<section class="pomodoro-button-container">
-		<button class="pomodoro-button">Stop</button>
-		<button class="pomodoro-button">Reset</button>
+		<button class="pomodoro-button" (click)='startSession()'>{{startButtonText}}</button>
+		<button class="pomodoro-button" routerLink='/'>Reset</button>
 	</section>
 
 </div>
