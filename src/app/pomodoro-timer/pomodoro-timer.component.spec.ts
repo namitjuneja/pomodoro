@@ -30,7 +30,7 @@ describe('PomodoroTimerComponent', () => {
 
     spyOn(component, 'startSession');
 
-    let button = fixture.debugElement.nativeElement.querySelector('#start-button');
+    const button = fixture.debugElement.nativeElement.querySelector('#start-button');
     button.click();
 
     fixture.whenStable().then(() => {
@@ -45,7 +45,7 @@ describe('PomodoroTimerComponent', () => {
 
     const runningStatus = component.running;
 
-    let button = fixture.debugElement.nativeElement.querySelector('#start-button');
+    const button = fixture.debugElement.nativeElement.querySelector('#start-button');
     button.click();
 
     expect(component.running).toBe(!runningStatus );
@@ -58,10 +58,9 @@ describe('PomodoroTimerComponent', () => {
 
     const runningStatus = component.running;
 
-    if (runningStatus){
+    if (runningStatus) {
       expect(component.startButtonText).toBe('Stop');
-    }
-    else{
+    } else {
       expect(component.startButtonText).toBe('Resume');
     }
   });
@@ -75,7 +74,7 @@ describe('PomodoroTimerComponent', () => {
 
     component.ngOnDestroy();
 
-    expect(clearInterval).toHaveBeenCalled(); 
+    expect(clearInterval).toHaveBeenCalled();
   });
 
 

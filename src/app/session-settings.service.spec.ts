@@ -22,9 +22,9 @@ describe('SessionSettingsService', () => {
 
   it('should reset to default session timings', () => {
   	service.resetSessionDurations();
-    expect(service.getSessionDuration('pomodoro')).toBe(25);
-    expect(service.getSessionDuration('short_break')).toBe(5);
-    expect(service.getSessionDuration('long_break')).toBe(15);
+   expect(service.getSessionDuration('pomodoro')).toBe(25);
+   expect(service.getSessionDuration('short_break')).toBe(5);
+   expect(service.getSessionDuration('long_break')).toBe(15);
   });
 
   it('should increment by 1', () => {
@@ -32,7 +32,7 @@ describe('SessionSettingsService', () => {
   	service.incrementDuration('pomodoro');
   	const incrementedPomodoroDuration = service.getSessionDuration('pomodoro');
 
-  	expect(incrementedPomodoroDuration).toBe(currentPomodoroDuration+1);
+  	expect(incrementedPomodoroDuration).toBe(currentPomodoroDuration + 1);
   });
 
   it('should decrement by 1', () => {
@@ -40,6 +40,6 @@ describe('SessionSettingsService', () => {
   	service.decrementDuration('pomodoro');
   	const decrementedPomodoroDuration = service.getSessionDuration('pomodoro');
 
-  	expect(decrementedPomodoroDuration).toBe(currentPomodoroDuration-1);
+  	expect(decrementedPomodoroDuration).toBe(currentPomodoroDuration - 1);
   });
 });
