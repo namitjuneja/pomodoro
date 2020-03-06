@@ -5,6 +5,10 @@
 		<div class="pomodoro-label"> {{sessionLabel}} </div>
 	</section>
 
+	<section class="session-length-label-container">
+		<div class="session-length-label"> Pomodoro Session Length <b>{{sessionSettings.getSessionDuration('pomodoro')}}m</b> | Short Break Length <b>{{sessionSettings.getSessionDuration('short_break')}}m</b> | Long Break Lenth <b>{{sessionSettings.getSessionDuration('long_break')}}m</b> </div>
+	</section>
+
 	<section class="pomodoro-button-container">
 		<button id="start-button" class="pomodoro-button" (click)='startSession()'>{{startButtonText}}</button>
 		<button id="reset-button" class="pomodoro-button" routerLink='/'>Reset</button>

@@ -10,7 +10,7 @@ import { ding } from "../constants"
 export class PomodoroTimerComponent implements OnInit, OnDestroy {
 
   constructor(
-    private sessionSettings : SessionSettingsService
+    public sessionSettings : SessionSettingsService
   ) { }
 
   sessionList = ['pomodoro', 'short_break', 'pomodoro', 'short_break', 'pomodoro', 'short_break', 'pomodoro', 'long_break'];

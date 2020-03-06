@@ -13,7 +13,26 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	min-height: 90%;
+	min-height: 80%;
+}
+
+.session-length-label-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 10%;
+}
+
+.session-length-label{
+	line-height: 1;
+	font-size: 1.2em;
+	letter-spacing: 0.029em;
+	font-weight: 300;
+}
+
+.session-length-label b{
+	font-weight: 900;
 }
 
 .pomodoro-button-container{
