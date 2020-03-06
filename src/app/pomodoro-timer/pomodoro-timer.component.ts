@@ -54,7 +54,7 @@ export class PomodoroTimerComponent implements OnInit, OnDestroy {
     if (this.sessionName == 'pomodoro') {
       this.sessionLabel = 'Pomodoro Session #' + this.sessionCount.pomodoro;
     } else if (this.sessionName == 'short_break') {
-      this.sessionLabel = 'Short Break # ' +  (((this.sessionCount.short_break - 1) % 3) + 1).toString() + ' of 4';
+      this.sessionLabel = 'Short Break # ' +  (((this.sessionCount.short_break - 1) % 3) + 1).toString() + ' of 3';
     } else {
       this.sessionLabel = 'Long Break';
     }
@@ -130,7 +130,7 @@ export class PomodoroTimerComponent implements OnInit, OnDestroy {
       if (!this.running){this.startSession();}
       clearInterval(this.sessionInterval);
       this.fastForwardInterval = setInterval(() => {
-        if (this.counter >= 2000) {
+        if (this.counter >= 6000) {
           this.counter = this.counter - 1000 + 2;
           this.seconds = Math.floor(this.counter / 1000 % 60);
           this.minutes = Math.floor(this.counter / 1000 / 60);
