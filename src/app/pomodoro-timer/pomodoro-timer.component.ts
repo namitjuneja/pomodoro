@@ -87,6 +87,8 @@ export class PomodoroTimerComponent implements OnInit, OnDestroy {
   		this.running = false;
   		this.startButtonText = 'Resume';
   		clearInterval(this.sessionInterval);
+      clearInterval(this.fastForwardInterval);
+      this.fastForwardInterval = null;
   	}
   }
 
@@ -94,6 +96,7 @@ export class PomodoroTimerComponent implements OnInit, OnDestroy {
   // this life cycle hook clears the existing timer and resets timer durations
   ngOnDestroy() {
   	clearInterval(this.sessionInterval);
+    clearInterval(this.fastForwardInterval);
     this.sessionSettings.resetSessionDurations();
   }
 
@@ -124,6 +127,7 @@ export class PomodoroTimerComponent implements OnInit, OnDestroy {
     if (!this.fastForwardInterval) {
       console.log('Fast and Furious');
 
+      if (!this.running){this.startSession();}
       clearInterval(this.sessionInterval);
       this.fastForwardInterval = setInterval(() => {
         if (this.counter >= 2000) {
