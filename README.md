@@ -6,7 +6,7 @@ A simple [Pomodoro Timer](https://en.wikipedia.org/wiki/Pomodoro_Technique) impl
 [Live Demo](namitjuneja.com/pomodoro)
 
 
-![Pomodoro Settings View](screenshots/pomodoro-timer.png "Settings Page View")
+![Pomodoro Settings View](screenshots/settings.png "Settings Page View")
 ![Pomodoro Timer View](screenshots/pomodoro-timer.png "Pomodoro Timer View")
 
 ## Get the Code
