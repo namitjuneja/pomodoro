@@ -86,6 +86,7 @@ export class PomodoroTimerComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
   	clearInterval(this.sessionInterval);
     this.sessionSettings.resetSessionDurations();
+    console.log(this.sessionInterval);
   }
 
 secondsString(number) {
