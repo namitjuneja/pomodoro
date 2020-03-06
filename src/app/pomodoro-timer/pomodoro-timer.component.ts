@@ -24,6 +24,7 @@ export class PomodoroTimerComponent implements OnInit, OnDestroy {
   startButtonText = 'Stop';
   startTime;
   sessionInterval;
+  fastForwardInterval;
   sessionLabel;
   counter;
   minutes;
@@ -89,23 +90,54 @@ export class PomodoroTimerComponent implements OnInit, OnDestroy {
     console.log(this.sessionInterval);
   }
 
-secondsString(number) {
-  if (typeof number == 'undefined'){
-    return '-'
+  secondsString(number) {
+    if (typeof number == 'undefined'){
+      return '-'
+    }
+    return (number < 10 ? '0' : '') + number
   }
-  return (number < 10 ? '0' : '') + number
-}
 
-minutesString(number) {
-  if (typeof number == 'undefined'){
-    return '-'
+  minutesString(number) {
+    if (typeof number == 'undefined'){
+      return '-'
+    }
+    return number;
   }
-  return number;
-}
 
-beep() {
-    var snd = new  Audio(ding);  
-    snd.play();
-}
+  beep() {
+      var snd = new  Audio(ding);  
+      snd.play();
+  }
+
+  fastForwardCounter()
+  {
+    if (!this.fastForwardInterval)
+    {
+      console.log("Fast and Furious");
+
+      clearInterval(this.sessionInterval);
+      this.fastForwardInterval = setInterval(() => {
+        if (this.counter>=2000){
+          this.counter = this.counter - 1000 + 2;
+          this.seconds = Math.floor(this.counter / 1000 % 60);
+          this.minutes = Math.floor(this.counter / 1000 / 60);
+        }
+        else{
+          clearInterval(this.fastForwardInterval);
+          this.fastForwardInterval = null;
+          this.running = false;
+          this.startSession();
+        }
+      }, 1)
+    }
+    else{
+      clearInterval(this.fastForwardInterval);
+      this.fastForwardInterval = null;
+      this.running = false;
+      this.startSession();
+    }
+    
+    console.log("Slow and Steady")
+  }
 
 }

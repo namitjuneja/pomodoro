@@ -5,7 +5,8 @@
 	justify-content: space-between;
 	text-align: center;
 	font-family: monospace;
-	height: 80vh
+	height: 80vh;
+	min-height: 500px;
 }
 
 .pomodoro-timer-container{
