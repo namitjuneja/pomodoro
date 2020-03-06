@@ -3,7 +3,7 @@
 
 A simple [Pomodoro Timer](https://en.wikipedia.org/wiki/Pomodoro_Technique) implemented using Angular.
 
-[Live Demo](namitjuneja.com/pomodoro)
+[Live Demo](http://namitjuneja.com/pomodoro)
 
 
 ![Pomodoro Settings View](screenshots/settings.png "Settings Page View")
